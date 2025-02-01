@@ -5,7 +5,9 @@ Il NE doit PAS être modifié à la main.
 
 # WireGuard Server pour YunoHost
 
-[![Niveau d’intégration](https://dash.yunohost.org/integration/wireguard.svg)](https://ci-apps.yunohost.org/ci/apps/wireguard/) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/wireguard.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/wireguard.maintain.svg)
+[![Niveau d’intégration](https://apps.yunohost.org/badge/integration/wireguard)](https://ci-apps.yunohost.org/ci/apps/wireguard/)
+![Statut du fonctionnement](https://apps.yunohost.org/badge/state/wireguard)
+![Statut de maintenance](https://apps.yunohost.org/badge/maintained/wireguard)
 
 [![Installer WireGuard Server avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=wireguard)
 
@@ -21,7 +23,7 @@ WireGuard® est un VPN rapide et moderne qui utilise une cryptographie de pointe
 Ce package inclut une interface d'administration pour WireGuard, ce qui le fait être plutôt un serveur VPN. Bien que WireGuard puisse être pair-à-pair, ce n'est pas comment ce package le configure.
 
 
-**Version incluse :** 0.6.2~ynh3
+**Version incluse :** 0.6.2~ynh4
 
 ## Captures d’écran
 

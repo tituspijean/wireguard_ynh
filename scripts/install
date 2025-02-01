@@ -35,6 +35,12 @@ ynh_setup_source --dest_dir="$install_dir"
 #=================================================
 ynh_script_progression --message="Configuring NGINX web server..." --weight=1
 
+if [ ${PACKAGE_CHECK_EXEC:-0} -eq 1 ]; then
+	package_check=true
+else
+	package_check=false
+fi
+
 # Create a dedicated nginx config
 ynh_add_nginx_config
 
@@ -93,7 +99,7 @@ chown -R $app: "$install_dir"
 
 chmod 750 /etc/wireguard
 chmod -R o-rwx /etc/wireguard
-chown -R $app: /etc/wireguard
+#chown -R $app: /etc/wireguard
 
 #=================================================
 # INTEGRATE SERVICE IN YUNOHOST
@@ -109,7 +115,7 @@ yunohost service add wireguard_ui --description="WireGuard UI"
 ynh_script_progression --message="Starting the systemd service for the UI..." --weight=1
 
 # Start a systemd service
-ynh_systemd_action --service_name=wireguard_ui --action="start" --line_match="http server started" --log_path="systemd" --timeout=30
+#ynh_systemd_action --service_name=wireguard_ui --action="start" --line_match="http server started" --log_path="systemd" --timeout=30
 
 #=================================================
 # END OF SCRIPT
